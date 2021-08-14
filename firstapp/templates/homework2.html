@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 학습</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Otomanopee+One&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    *{
+
+        font-family: 'Jua', sans-serif;
+    }
+    header{
+        width: 100%;
+	    height: 100px;
+	    background : linear-gradient(to right ,yellow, green, red);
+	    text-align : center;
+
+    }
+    h1{
+        color : indigo;
+        font-family : Arial;
+        text-shadow : 2px 2px 2px white;
+    }
+    a.headerA{
+        text-decoration-line: none;
+    }
+    a.headerA:hover{
+        font-weight : bold;
+    }
+    #headerA_nav{
+        word-spacing: 5em;
+    }
+
+    section{
+        text-align : center;
+        margin : auto;
+        width : auto;
+    }
+    .article1{
+        width : 700px;
+        height : 150px;
+        padding : 10px;
+        border : 5px solid pink;
+        border-radius : 30px;
+        text-align : left;
+    }
+
+    .article2{
+        width : 700px;
+        height : 200px;
+        padding : 10px;
+        border : 5px solid pink;
+        border-radius : 30px;
+        text-align : left;
+    }
+    .div2{
+        text-align : left;
+    }
+    .article3{
+        width : 700px;
+        height : 450px;
+        padding : 10px;
+        border : 5px solid pink;
+        border-radius : 30px;
+
+    }
+    .div3{
+        width : auto;
+        height : auto;
+        text-align : center;
+    }
+    footer{
+        width: 100%;
+	    height: 100px;
+	    background : black;
+	    text-align : center;
+	    line-height: 100px;
+    }
+    table{
+        border : 1px green;
+        text-align : center;
+    }
+    th{
+        width : 100px;
+        background : lime;
+    }
+    .section1{
+        width : auto;
+        height : auto;
+        display : flex;
+        text-align : center;
+    }
+
+
+
+
+</style>
+<body>
+<header>
+    <h1> HTML 학습</h1>
+    <nav id="headerA_nav">
+        <a class="headerA" href="https://www.w3.org/"> W3C </a>
+        <a class="headerA" href="https://www.w3schools.com/"> W3CSCHOOL </a>
+        <a class="headerA" href="https://jquery.com/"> JQuery </a>
+    </nav>
+</header>
+<br>
+<div class="section1">
+    <section >
+    <article class="article1"style="text-align:center;">
+    <h2 style="color:violet; text-align:left; ">나의 소개 </h2>
+    <ul style="text-align:left;">
+    <li>이름 : 이종현 </li>
+    <li>별명 : 이종 </li>
+    <li>관심기술 : Python, HTML </li>
+    <li>취미 : 영화보기 </li>
+    </ul>
+    </article>
+    <br>
+<article class="article2">
+    <h2 style ="color:green;"> 올해 재미있게 본 영화 </h2>
+    <table border="1">
+        <tr><th><b> 제목</b> </th><th> <b>장르</b> </th></tr>
+        <tr><td>랑종</td><td>공포</td></tr>
+        <tr><td>크루엘라</td><td>디즈니</td></tr>
+        <tr><td>범죄도시</td><td>액션 스릴러</td></tr>
+    </table>
+</article>
+    <br>
+<article class="article3">
+    <div class="div2">
+        <h2 style ="color : blue;">자랑하고싶은 <a style="color:purple;">우리 동네</a>의 아름다운 곳</h2>
+        <a>서울특별시에 있는 산. 중구와 용산구의 경계에 있다.높이는 해발 262m. 남산의 한자 표기는 南山.<br>
+        그 뜻은 앞산을 뜻하는 것으로 유래는 조선시대의 궁궐인 경복궁에서 바라보면 앞에 남산이기 때문이라고 한다.<br>
+        조선시대의 한양 시가지는 사대문 안만 포함되었다.현재 위치가 서울의 남쪽이 아닌데도 남산이라 불리는 이유는 바로 이것이다.</a>
+    </div>
+
+    <br>
+    <div class="div3">
+        <img id="image1" src="images/namsan.jpg" width="50%" height="50%" >
+        <br>
+        <a id="address">서울시 용산구에 있는 남산타워</a>
+    </div>
+
+
+</article>
+</section>
+</div>
+
+<br>
+<aside style="text-align : center;">
+    <video width="400" controls>
+        <source src="balldrop.MP4" type="video/mp4">
+    </video>
+</aside>
+<footer>
+    <em style="color : white;">이 문서는 이 종현에 의해 HTML5 와 CSS기술을 사용하여 2021년 07월16일에 작성하였습니다.(ver 1.0)</em>
+</footer>
+</body>
+</html>

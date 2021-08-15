@@ -126,8 +126,9 @@ def comment(request,id):
     if request.method == "POST":
         author = request.POST['author']
         content = request.POST['content']
+        password = request.POST['password']
         board = Board.objects.get(id = id)
-        comment = Comment(board=board, author=author, content=content)
+        comment = Comment(board=board, author=author, content=content, password=password)
         comment.save()
         return redirect("activity")
     context = {
@@ -135,3 +136,31 @@ def comment(request,id):
             "id" : id
     }
     return render(request,'comment.html',context)
+
+
+def comment_update(request,id):
+    commenting = Comment.objects.get(id=id)
+    if request.method=='POST':
+        if request.POST['password'] == commenting.password:
+            commenting.author = request.POST['author']
+            commenting.content = request.POST['content']
+            commenting.password = request.POST['password']
+            commenting.save();
+            return redirect("activity")
+        else:
+            return redirect("fail")
+    else :
+        context = {'commenting': commenting}
+    return render(request,'comment_update.html',context)
+
+def comment_delete(request,id):
+    comment = Comment.objects.get(id=id)
+    if request.method == 'POST':
+        if request.POST['password'] == comment.password:
+            comment.delete()
+            return redirect("activity")
+        else:
+            return redirect("fail")
+    else:
+        context = {'comment': comment}
+    return render(request,'comment_delete.html',context)

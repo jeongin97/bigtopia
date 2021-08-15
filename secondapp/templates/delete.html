@@ -86,16 +86,15 @@ body {
         {% csrf_token %}
         <h2>{{ board.author }}</h2>
         <p>{{ board.title }}</p>
-        <h2>삭제 하시겠습니까?</h2>
+        <h2 style="color:red;">삭제 하시겠습니까?</h2>
         <div class="form-group row">
             <label for="inputpassword" class="col-sm-2 col-form-label" style="text-align:right;"><strong>PW:</strong></label>
             <div class="col-sm-10">
-                <input type="text" name="password" class="form-control" id="inputpassword" value="{{ boarding.password }}">
+                <input type="text" name="password" class="form-control" id="inputpassword" value="{{ board.password }}">
             </div>
         </div>
         <input style="color: #ffffff; background-color: #dc3545; border: none;" class="btn btn-danger" type="submit" role="button" value="삭제">
     </form>
-
 </div>
 
 

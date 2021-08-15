@@ -48,3 +48,4 @@ class Comment(models.Model):
     author = models.CharField(max_length=10, null=False)
     content = models.TextField(null=False)
     date= models.DateTimeField(auto_now_add=True)
+    password = models.CharField(max_length=10,null=True, default="None")
